@@ -6,7 +6,9 @@
 #include <set>
 #include <bitset>
 
-// CHANGE FROM WS02
+// CHANGE FROM WS01
+// CHANGE FROM WS02 (merged)
+>>>>>>> origin
 class Node
 {
   public:
