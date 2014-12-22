@@ -4,6 +4,7 @@
 #include "Node.hpp"
 
 
+// CHANGE FROM WS01
 Node::Node(const std::string & name) : m_name(name)
 {
   ;
