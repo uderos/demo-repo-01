@@ -9,6 +9,7 @@ Node::Node(const std::string & name) : m_name(name)
   ;
 }
 
+// CHANGE FROM WS02
 Node::~Node()
 {
   ;

@@ -6,6 +6,7 @@
 #include <set>
 #include <bitset>
 
+// CHANGE FROM WS02
 class Node
 {
   public:
