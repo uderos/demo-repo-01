@@ -8,7 +8,6 @@
 
 // CHANGE FROM WS01
 // CHANGE FROM WS02 (merged)
->>>>>>> origin
 class Node
 {
   public:
