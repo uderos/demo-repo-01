@@ -30,7 +30,7 @@ static void f_test01()
 }
 **/
 
-// New comment from ws2
+// New comment from branch main_branch_01 (ws2)
 
 int main(const int argc, const char *argv[])
 {
