@@ -30,6 +30,8 @@ static void f_test01()
 }
 **/
 
+// New comment from ws2
+
 int main(const int argc, const char *argv[])
 {
   const char * fname = (argc > 1 ? argv[1] : 0);
