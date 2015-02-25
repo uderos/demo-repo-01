@@ -73,7 +73,16 @@ CircularDetector::node_queue_t CircularDetector::m_get_root_nodes()
   return root_nodes;
 }
 
-bool CircularDetector::m_all_inputs_processed(const Node & node)
+void CircularDetector::m_initialize_nodes()
+{
+  for (Node::node_set_t::const_iterator p = m_nodes.begin();
+        p != m_nodes.end(); ++p) {
+
+    (*p)->ClearFlag(Node::NUM_FLAGS);
+  }
+}
+
+bool CircularDetector::m_all_inputs_processed(const Node & node) const
 {
   const Node::node_set_t & input_nodes = node.GetInputNodes();
 
@@ -118,15 +127,6 @@ void CircularDetector::m_set_to_visited(Node & node,
   DBGOUT << "Adding " << node.GetName() << " to visited queue" << std::endl;
   node.SetFlag(Node::VISITED);
   visitedSet.insert(&node);
-}
-
-void CircularDetector::m_initialize_nodes()
-{
-  for (Node::node_set_t::const_iterator p = m_nodes.begin();
-        p != m_nodes.end(); ++p) {
-
-    (*p)->ClearFlag(Node::NUM_FLAGS);
-  }
 }
 
 

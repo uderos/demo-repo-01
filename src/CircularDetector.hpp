@@ -26,7 +26,7 @@ class CircularDetector
 
     void m_initialize_nodes();
     node_queue_t m_get_root_nodes();
-    bool m_all_inputs_processed(const Node & node);
+    bool m_all_inputs_processed(const Node & node) const;
     void m_set_to_processed(Node & node, 
                             node_queue_t & readyToProcess,
                             Node::node_set_t & visitedSet);
