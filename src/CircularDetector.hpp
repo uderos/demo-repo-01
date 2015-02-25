@@ -8,7 +8,7 @@
 #include <queue>
 #include "Node.hpp"
 
-// 20150225-02
+// 20150225-03-WS02
 
 class CircularDetector
 {
@@ -35,5 +35,6 @@ class CircularDetector
                             Node::node_set_t & visitedSet);
 };
 
+// 20150225-02-WS01
 
 #endif // CIRCULAR_DETECTOR_HPP
