@@ -8,8 +8,6 @@
 #include <queue>
 #include "Node.hpp"
 
-// 20150225-03-WS02
-
 class CircularDetector
 {
   public:
@@ -25,16 +23,20 @@ class CircularDetector
     Node::node_set_t m_nodes;
 
     void m_initialize_nodes();
+
     node_queue_t m_get_root_nodes();
+
     bool m_all_inputs_processed(const Node & node) const;
+
     void m_set_to_processed(Node & node, 
                             node_queue_t & readyToProcess,
                             Node::node_set_t & visitedSet);
+
     void m_set_to_visited(Node & node,
-                            node_queue_t & readyToProcess,
-                            Node::node_set_t & visitedSet);
+                          node_queue_t & readyToProcess,
+                          Node::node_set_t & visitedSet);
 };
 
-// 20150225-02-WS01
+
 
 #endif // CIRCULAR_DETECTOR_HPP
