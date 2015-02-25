@@ -8,6 +8,8 @@
 #include <queue>
 #include "Node.hpp"
 
+// 20150225-02
+
 class CircularDetector
 {
   public:
