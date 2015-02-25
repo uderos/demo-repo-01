@@ -6,8 +6,7 @@
 #include <set>
 #include <bitset>
 
-// NEW CHANGE FROM WS01
-// CHANGE FROM WS02 (merged)
+// 20140225-01 - WS2
 class Node
 {
   public:
