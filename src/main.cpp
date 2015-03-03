@@ -19,12 +19,6 @@ static void f_test02(const char * fname)
 
 }
 
-/**
- * OBSOLETE CODE REMOVED BY WS01
- */
-
-// New comment from branch main_branch_01 (ws2)
-
 int main(const int argc, const char *argv[])
 {
   const char * fname = (argc > 1 ? argv[1] : 0);
