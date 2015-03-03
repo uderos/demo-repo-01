@@ -20,15 +20,8 @@ static void f_test02(const char * fname)
 }
 
 /**
-static void f_test01()
-{
-  const std::string fname("file1.txt");
-  NodeGenerator g;
-  if (! g.LoadFile(fname))
-    std::cout << "File " << fname << " loading failure" << std::endl;
-  else g.Dump();
-}
-**/
+ * OBSOLETE CODE REMOVED BY WS01
+ */
 
 // New comment from branch main_branch_01 (ws2)
 
