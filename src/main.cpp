@@ -3,6 +3,8 @@
 #include "NodeGenerator.hpp"
 #include "CircularDetector.hpp"
 
+// CHANGE 01
+
 static void f_test02(const char * fname)
 {
   NodeGenerator g;
