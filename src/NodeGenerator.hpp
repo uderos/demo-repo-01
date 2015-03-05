@@ -7,7 +7,6 @@
 #include <map>
 #include "Node.hpp"
 
-// 20150225-01 WS01
 class NodeGenerator
 {
   public:

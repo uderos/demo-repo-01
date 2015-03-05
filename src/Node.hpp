@@ -6,7 +6,6 @@
 #include <set>
 #include <bitset>
 
-// 20140225-01 - WS2
 class Node
 {
   public:

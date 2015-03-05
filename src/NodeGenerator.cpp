@@ -4,7 +4,6 @@
 #include <sstream>
 #include "NodeGenerator.hpp"
 
-// 20150225-01 WS01
 
 NodeGenerator::NodeGenerator()
 {

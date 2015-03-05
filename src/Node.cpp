@@ -4,7 +4,6 @@
 #include "Node.hpp"
 
 
-// 20140225-01 - WS2
 Node::Node(const std::string & name) : m_name(name)
 {
   ;
