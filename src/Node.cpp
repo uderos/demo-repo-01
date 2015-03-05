@@ -42,17 +42,26 @@ void Node::AddOutputNode(Node & output_node)
 
 void Node::Dump(std::ostream & oss) const
 {
+  const std::string none("(none)");
   oss << m_name;
 
   oss << " IN: ";
-  for (Node::node_set_t::const_iterator p = m_input_nodes.begin();
-        p != m_input_nodes.end(); ++p)
-    oss << (*p)->GetName() << " ";
+  if (m_input_nodes.empty()) {
+    oss << none
+  } else {
+    for (Node::node_set_t::const_iterator p = m_input_nodes.begin();
+          p != m_input_nodes.end(); ++p)
+      oss << (*p)->GetName() << " ";
+  }
 
   oss << " OUT: ";
-  for (Node::node_set_t::const_iterator p = m_output_nodes.begin();
-        p != m_output_nodes.end(); ++p)
-    oss << (*p)->GetName() << " ";
+  if (m_output_nodes.empty()) {
+    oss << none
+  } else {
+    for (Node::node_set_t::const_iterator p = m_output_nodes.begin();
+          p != m_output_nodes.end(); ++p)
+      oss << (*p)->GetName() << " ";
+  }
 }
 
 void Node::SetFlag(const eFlags flag)
