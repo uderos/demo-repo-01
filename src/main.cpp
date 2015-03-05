@@ -4,6 +4,7 @@
 #include "CircularDetector.hpp"
 
 // CHANGE 01
+// CHANGE 02
 
 static void f_test02(const char * fname)
 {
