@@ -35,7 +35,7 @@ bool NodeGenerator::LoadFile(const std::string & fname)
 
 void NodeGenerator::Dump() const
 {
-  std::cout << "DUMP = NumNodes=" << m_nodes.size() << std::endl;
+  std::cout << "NodeGenerator DUMP: NumNodes=" << m_nodes.size() << std::endl;
     
   for (node_map_t::const_iterator p = m_nodes.begin();
       p != m_nodes.end(); ++p) {
