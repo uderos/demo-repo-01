@@ -5,12 +5,12 @@
 
 static void f_test04(const char * fname)
 {
-  ; // TBD
+  std::cout << __FUNCTION__ << "():" << __LINE__ << std::endl; // UBEDEBUG
 }
 
 static void f_test03(const char * fname)
 {
-  ; // TBD
+  std::cout << __FUNCTION__ << "():" << __LINE__ << std::endl; // UBEDEBUG
 }
 
 static void f_test02(const char * fname)
