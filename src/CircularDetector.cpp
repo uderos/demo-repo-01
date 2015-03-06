@@ -9,6 +9,8 @@
 #define DBGOUT if(0)std::cout
 
 
+// Maintenance change 01 (v1.1)
+/
 CircularDetector::CircularDetector(const Node::node_set_t & nodes) : 
   m_nodes(nodes)
 {
