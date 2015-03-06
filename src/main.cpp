@@ -1,11 +1,11 @@
+/****************************************************************************
+ * FILE HEADER
+ * *************************************************************************/
 
+/* INCLUDE FILES */
 #include <iostream>
 #include "NodeGenerator.hpp"
 #include "CircularDetector.hpp"
-
-// CHANGE 01
-// CHANGE 02
-// CHANGE 03
 
 static void f_test02(const char * fname)
 {
@@ -35,4 +35,4 @@ int main(const int argc, const char *argv[])
 }
 
 
-
+/* END OF FILE */
