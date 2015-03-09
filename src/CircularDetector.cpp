@@ -22,41 +22,6 @@ CircularDetector::~CircularDetector()
   ;
 }
 
-bool CircularDetector::HasCircularDependency()
-{
-  m_initialize_nodes();
-
-  node_queue_t readyToProcess = m_get_root_nodes();
-  Node::node_set_t visitedSet;
-
-  while (! readyToProcess.empty()) {
-
-    Node & node = *(readyToProcess.front());
-    DBGOUT << "\nLooking at node " << node.GetName() 
-           << " rqs=" << readyToProcess.size()
-           << " vs=" << visitedSet.size()
-           << std::endl;
-  
-    const Node::node_set_t & output_nodes = node.GetOutputNodes();
-    for (Node::node_set_t::const_iterator q = output_nodes.begin();
-          q != output_nodes.end(); ++q) {
-
-      if (m_all_inputs_processed(*(*q))) 
-        m_set_to_processed(*(*q), readyToProcess, visitedSet);
-      else 
-        m_set_to_visited(*(*q), readyToProcess, visitedSet);
-    }
-    
-    readyToProcess.pop();
-  }
-
-  DBGOUT << "Out of loop"
-         << " rqs=" << readyToProcess.size()
-         << " vs=" << visitedSet.size()
-         << std::endl;
-
-  return (! visitedSet.empty());
-}
 
 void CircularDetector::m_initialize_nodes()
 {
