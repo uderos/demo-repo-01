@@ -16,12 +16,12 @@
 
 static void f_test04(const char * fname)
 {
-  std::cout << __FUNCTION__ << "():" << __LINE__ << std::endl; // UBEDEBUG
+  std::cout << __FUNCTION__ << "():" << __LINE__ << std::endl;
 }
 
 static void f_test03(const char * fname)
 {
-  std::cout << __FUNCTION__ << "():" << __LINE__ << std::endl; // UBEDEBUG
+  std::cout << __FUNCTION__ << "():" << __LINE__ << std::endl;
 }
 
 static void f_test02(const char * fname)
