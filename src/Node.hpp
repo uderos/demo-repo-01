@@ -40,6 +40,8 @@ class Node
     
     void Dump(std::ostream & oss) const;
 
+    virtual std::string to_string() const;  // FEATURE1
+
   private:
     std::string m_name;
 

@@ -89,3 +89,15 @@ bool Node::HasFlag(const eFlags flag) const
 	return m_flags.test(flag);
 }
 
+std::string Node::to_string() const  // FEATURE1
+{
+  std::cout << __FILE__ << ":" << __FUNCTION__ << "():" << __LINE__ << std::endl; // UBEDEBUG
+
+  std::ostringstream oss;
+  Dump(oss);
+
+  std::cout << "UBEDEBUG: " << oss.str() << std::endl;
+
+  return oss.str();
+}
+
