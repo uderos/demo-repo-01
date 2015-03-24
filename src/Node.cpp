@@ -94,7 +94,9 @@ std::string Node::to_string() const  // FEATURE1
   std::cout << __FILE__ << ":" << __FUNCTION__ << "():" << __LINE__ << std::endl; // UBEDEBUG
 
   std::ostringstream oss;
+  oss << "<";
   Dump(oss);
+  oss << ">"
 
   std::cout << "UBEDEBUG: " << oss.str() << std::endl;
 
