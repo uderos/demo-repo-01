@@ -89,7 +89,7 @@ bool Node::HasFlag(const eFlags flag) const
 	return m_flags.test(flag);
 }
 
-std::string Node::to_string() const  // FEATURE1
+std::string Node::to_string() const
 {
   std::cout << __FILE__ << ":" << __FUNCTION__ << "():" << __LINE__ << std::endl; // UBEDEBUG
 
@@ -97,8 +97,6 @@ std::string Node::to_string() const  // FEATURE1
   oss << "<";
   Dump(oss);
   oss << ">"
-
-  std::cout << "UBEDEBUG: " << oss.str() << std::endl;
 
   return oss.str();
 }
