@@ -46,8 +46,7 @@ void NodeGenerator::Dump(ostream & os) const  // FEATURE2
 {
   os << "NodeGenerator DUMP: NumNodes=" << m_nodes.size() << std::endl;
     
-  for (node_map_t::const_iterator p = m_nodes.begin();
-      p != m_nodes.end(); ++p) {
+  for (auto p = m_nodes.begin(); p != m_nodes.end(); ++p) {
     (p->second)->Dump(os);
     os << std::endl;
   }
