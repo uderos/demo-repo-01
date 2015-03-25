@@ -39,12 +39,17 @@ bool NodeGenerator::LoadFile(const std::string & fname)
 
 void NodeGenerator::Dump() const
 {
-  std::cout << "NodeGenerator DUMP: NumNodes=" << m_nodes.size() << std::endl;
+  Dump(std::cout);                            // FEATURE2
+}
+
+void NodeGenerator::Dump(ostream & os) const  // FEATURE2
+{
+  os << "NodeGenerator DUMP: NumNodes=" << m_nodes.size() << std::endl;
     
   for (node_map_t::const_iterator p = m_nodes.begin();
       p != m_nodes.end(); ++p) {
-    (p->second)->Dump(std::cout);
-    std::cout << std::endl;
+    (p->second)->Dump(os);
+    os << std::endl;
   }
 }
 
