@@ -9,8 +9,8 @@
 #include <sstream>
 #include "CircularDetector.hpp"
 
-// #define DBGOUT std::cout
-#define DBGOUT if(0)std::cout
+#define DBGOUT std::cout
+// #define DBGOUT if(0)std::cout
 
 
 CircularDetector::CircularDetector(const Node::node_set_t & nodes) : 
