@@ -39,10 +39,10 @@ bool NodeGenerator::LoadFile(const std::string & fname)
 
 void NodeGenerator::Dump() const
 {
-  Dump(std::cout);                            // FEATURE2
+  Dump(std::cout);
 }
 
-void NodeGenerator::Dump(ostream & os) const  // FEATURE2
+void NodeGenerator::Dump(ostream & os) const
 {
   os << "NodeGenerator DUMP: NumNodes=" << m_nodes.size() << std::endl;
     

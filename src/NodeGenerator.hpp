@@ -23,7 +23,7 @@ class NodeGenerator
     Node::node_set_t GetNodes() const;
 
     void Dump() const;
-    void Dump(ostream & os) const;  // FEATURE2
+    void Dump(ostream & os) const;
 
 
   private:
