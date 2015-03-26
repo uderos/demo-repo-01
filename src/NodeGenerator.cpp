@@ -46,7 +46,8 @@ void NodeGenerator::Dump(ostream & os) const
 {
   os << "NodeGenerator DUMP: NumNodes=" << m_nodes.size() << std::endl;
     
-  for (auto p = m_nodes.begin(); p != m_nodes.end(); ++p) {
+  for (auto p = m_nodes.begin(); p != m_nodes.end(); ++p) 
+  {
     (p->second)->Dump(os);
     os << std::endl;
   }
@@ -71,7 +72,8 @@ bool NodeGenerator::m_add_link(const std::string & from_node_name,
   Node * from_node_ptr = m_get_node(from_node_name);
   Node * to_node_ptr   = m_get_node(to_node_name);
 
-  if (from_node_ptr && to_node_ptr) {
+  if (from_node_ptr && to_node_ptr) 
+  {
     from_node_ptr->AddOutputNode(*to_node_ptr);
     to_node_ptr->AddInputNode(*from_node_ptr);
     return true;
@@ -84,7 +86,8 @@ bool NodeGenerator::m_load_nodes(std::ifstream & ifs)
 {
   std::string fline;
 
-  if (std::getline(ifs, fline)) {
+  if (std::getline(ifs, fline)) 
+  {
     std::istringstream iss(fline);
 
     std::string node_name;
@@ -99,7 +102,8 @@ bool NodeGenerator::m_load_links(std::ifstream & ifs)
 {
   std::string fline;
 
-  while (std::getline(ifs, fline)) {
+  while (std::getline(ifs, fline)) 
+  {
     std::istringstream iss(fline);
 
     std::string from_node, to_node;
