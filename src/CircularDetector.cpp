@@ -31,8 +31,8 @@ bool CircularDetector::HasCircularDependency()
   node_queue_t readyToProcess = m_get_root_nodes();
   Node::node_set_t visitedSet;
 
-  while (! readyToProcess.empty()) {
-
+  while (! readyToProcess.empty()) 
+  {
     Node & node = *(readyToProcess.front());
     DBGOUT << "\nLooking at node " << node.GetName() 
            << " rqs=" << readyToProcess.size()
@@ -41,8 +41,8 @@ bool CircularDetector::HasCircularDependency()
   
     const Node::node_set_t & output_nodes = node.GetOutputNodes();
     for (Node::node_set_t::const_iterator q = output_nodes.begin();
-          q != output_nodes.end(); ++q) {
-
+          q != output_nodes.end(); ++q) 
+    {
       if (m_all_inputs_processed(*(*q))) 
         m_set_to_processed(*(*q), readyToProcess, visitedSet);
       else 
@@ -63,8 +63,8 @@ bool CircularDetector::HasCircularDependency()
 void CircularDetector::m_initialize_nodes()
 {
   for (Node::node_set_t::const_iterator p = m_nodes.begin();
-        p != m_nodes.end(); ++p) {
-
+        p != m_nodes.end(); ++p) 
+  {
     (*p)->ClearFlag(Node::NUM_FLAGS);
   }
 }
