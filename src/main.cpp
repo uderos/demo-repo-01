@@ -32,8 +32,15 @@ static void f_test02(const char * fname)
 
 }
 
+static void f_test01()
+{
+  ;
+}
+
 int main(const int argc, const char *argv[])
 {
+  // f_test01();
+
   const char * fname = (argc > 1 ? argv[1] : 0);
   if (fname)
     f_test02(fname);
