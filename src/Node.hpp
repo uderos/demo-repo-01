@@ -14,13 +14,7 @@ class Node
 {
   public:
 
-    enum eFlags
-    {
-      PROCESSED,
-      VISITED,
-
-      NUM_FLAGS
-    };
+    enum eFlags { PROCESSED, VISITED, NUM_FLAGS };
 
     typedef std::set<Node *>node_set_t;
 
