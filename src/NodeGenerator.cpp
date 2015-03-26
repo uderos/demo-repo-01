@@ -125,7 +125,4 @@ Node::node_set_t NodeGenerator::GetNodes() const
   return node_list;
 }
 
-//////////////////
-// CR #1425     //
-//////////////////
 
