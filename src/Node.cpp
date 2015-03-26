@@ -44,6 +44,11 @@ void Node::AddOutputNode(Node & output_node)
   m_output_nodes.insert(&output_node);
 }
 
+void Node::Dump() const
+{
+  Dump(std::cout);
+}
+
 void Node::Dump(std::ostream & oss) const
 {
   const std::string none("(none)");
