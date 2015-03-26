@@ -106,3 +106,7 @@ std::string Node::to_string() const
   return oss.str();
 }
 
+//////////////////
+// CR #1425     //
+//////////////////
+
