@@ -38,6 +38,7 @@ class Node
     void ClearFlag(const eFlags flag);
     bool HasFlag(const eFlags flag) const;
     
+    void Dump() const;
     void Dump(std::ostream & oss) const;
 
     virtual std::string to_string() const;
