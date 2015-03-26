@@ -15,7 +15,9 @@
 class CircularDetector
 {
   public:
+
     CircularDetector(const Node::node_set_t & nodes);
+
     virtual ~CircularDetector();
 
     bool HasCircularDependency();

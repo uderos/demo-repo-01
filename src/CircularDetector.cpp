@@ -75,9 +75,10 @@ CircularDetector::node_queue_t CircularDetector::m_get_root_nodes()
   node_queue_t root_nodes;
 
   for (Node::node_set_t::const_iterator p = m_nodes.begin();
-        p != m_nodes.end(); ++p) {
-
-    if ((*p)->GetInputNodes().size() == 0){
+        p != m_nodes.end(); ++p) 
+  {
+    if ((*p)->GetInputNodes().size() == 0)
+    {
     
       (*p)->SetFlag(Node::PROCESSED);
       root_nodes.push(*p);
@@ -87,13 +88,15 @@ CircularDetector::node_queue_t CircularDetector::m_get_root_nodes()
   return root_nodes;
 }
 
+bool Node::m_all_inputs_processed(const Node & node) const;
 {
   const Node::node_set_t & input_nodes = node.GetInputNodes();
 
   for (Node::node_set_t::const_iterator p = input_nodes.begin();
-        p != input_nodes.end(); ++p) {
-
-      if ( ! (*p)->HasFlag(Node::PROCESSED)) {
+        p != input_nodes.end(); ++p) 
+  {
+      if ( ! (*p)->HasFlag(Node::PROCESSED)) 
+      {
         DBGOUT << "Node " << node.GetName()
                << " - input node " << (*p)->GetName()
                << " is NOT processed\n";
@@ -110,14 +113,16 @@ void CircularDetector::m_set_to_processed(Node & node,
                                           Node::node_set_t & visitedSet)
 {
   // Add to the ready to process queue and flag as 'processed'
-  if (! node.HasFlag(Node::PROCESSED)) {
+  if (! node.HasFlag(Node::PROCESSED)) 
+  {
     DBGOUT << "Adding " << node.GetName() << " to readyToProcess queue" << std::endl;
     node.SetFlag(Node::PROCESSED);
     readyToProcess.push(&node);
   }
 
   // Remove from the visited queue
-  if (visitedSet.find(&node) != visitedSet.end()) {
+  if (visitedSet.find(&node) != visitedSet.end()) 
+  {
     DBGOUT << "Removing " << node.GetName() << " from visited queue" << std::endl;
     node.ClearFlag(Node::VISITED);
     visitedSet.erase(&node);
