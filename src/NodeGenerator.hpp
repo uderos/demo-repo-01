@@ -7,7 +7,6 @@
 #define NODE_GENERATOR_HPP
 
 #include <string>
-#include <vector>
 #include <iosfwd>
 #include <map>
 #include "Node.hpp"
